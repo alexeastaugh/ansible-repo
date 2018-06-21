@@ -1,0 +1,4 @@
+---
+- hosts: vagrant-testing
+  roles:
+    - common
