@@ -1,7 +1,7 @@
 ---
 - name: INSTALL PACKAGES
   become: true
-  apt: name="{{item}}" state=present
+  apt: name="{{item}}" state=present update_cache=yes
   with_items:
     - vim
     - curl
@@ -26,4 +26,4 @@
     - zsh
     - jq
     - imagemagick
-    - gnome-tweaks
+    #- gnome-tweaks
