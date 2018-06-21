@@ -1,5 +1,5 @@
 ---
-- name: INSTALL PACKAGES
+- name: Install Packages
   become: true
   apt: name="{{item}}" state=present update_cache=yes
   with_items:
@@ -27,3 +27,18 @@
     - jq
     - imagemagick
     #- gnome-tweaks
+
+# Install Monaco fonts
+- name: Create font directory (Monaco)
+  become: true
+  file:
+    path: /usr/share/fonts/truetype/ttf-monaco
+    state: directory
+- name: Download Monaco fonts
+  become: true
+  get_url:
+    url: http://www.gringod.com/wp-upload/software/Fonts/Monaco_Linux.ttf
+    dest: /usr/share/fonts/truetype/ttf-monaco/
+- name: Install Monaco fonts
+  become: true
+  command: mkfontdir && cd /usr/share/fonts/truetype/ && fc-cache
