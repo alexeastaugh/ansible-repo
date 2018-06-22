@@ -1,0 +1,13 @@
+---
+- name: Add user - alex
+  become: true
+  user:
+    name: alex
+    password: $6$aqD4OX9N$/CtQK0sCZFmyihSjQBNRlwJoQIEn37R4Yw2FYjWpmvY0WpEy14M.Yz/zDotRSiQ/AFkN9t.pB.MoNhN7QWAhE1
+
+- name: Add user to correct groups
+  become: true
+  user:
+    name: alex
+    groups: admin
+    append: yes
