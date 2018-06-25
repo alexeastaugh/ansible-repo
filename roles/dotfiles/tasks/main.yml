@@ -1,0 +1,7 @@
+---
+- name: Clone dot files
+  git:
+    repo: https://github.com/alexeastaugh/dotfiles.git
+    dest: /home/alex/dotfiles
+  become: yes
+  become_user: alex

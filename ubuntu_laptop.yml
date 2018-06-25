@@ -2,4 +2,4 @@
 - hosts: local
   connection: local
   roles:
-    - common
+    - ubuntu-apt-packages
