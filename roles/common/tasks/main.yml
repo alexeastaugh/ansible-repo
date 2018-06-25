@@ -28,6 +28,13 @@
     - imagemagick
     #- gnome-tweaks
 
+- name: Clone dot files
+  git:
+    repo: https://github.com/alexeastaugh/dotfiles.git
+    dest: /home/alex/dotfiles
+  become: yes
+  become_user: alex
+
 # Install Monaco fonts
 - name: Create font directory (Monaco)
   become: true
