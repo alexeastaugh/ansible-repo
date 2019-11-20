@@ -8,8 +8,8 @@ help: ## This help.
 setup: ## Builds test environemht using Vagrant
 	cd vagrant && vagrant up
 
-check:
-	ansible-playbook vagrant_test.yml --check
+check: ## Check the vagrant_test playbook
+	ansible-playbook vagrant_test.yml --check --ssh-extra-args="-o IdentitiesOnly=yes"
 
 cleanup: ## Cleanup environment
 	cd vagrant && vagrant destroy

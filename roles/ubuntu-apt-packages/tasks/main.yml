@@ -1,29 +1,28 @@
 ---
 - name: Install Packages
   become: true
-  apt: name="{{item}}" state=present update_cache=yes
-  with_items:
-    - vim
-    - curl
-    - stow
-    - git
-    - htop
-    - tmux
-    - youtube-dl
-    - moc
-    - network-manager-openvpn
-    - network-manager-openvpn-gnome
-    - xfonts-terminus
-    - scrot
-    - nautilus-dropbox
-    - mpv
-    - tree
-    - nmap
-    - vagrant
-    - tilix
-    - python3-setuptools
-    - python3-pip
-    - zsh
-    - jq
-    - imagemagick
-    #- gnome-tweaks
+  apt: 
+    name: [
+      'vim', 
+      'curl', 
+      'stow', 
+      'git', 
+      'htop', 
+      'tmux', 
+      'youtube-dl', 
+      'moc', 
+      'network-manager-openvpn', 
+      'network-manager-openvpn-gnome', 
+      'xfonts-terminus', 
+      'scrot', 
+      'nautilus-dropbox',
+      'mpv', 
+      'tree', 
+      'nmap', 
+      'vagrant', 
+      'tilix', 
+      'python3-setuptools', 
+      'python3-pip', 
+      'zsh', 
+      'jq', 
+      'imagemagick']

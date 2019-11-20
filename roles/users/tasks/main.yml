@@ -9,5 +9,6 @@
   become: true
   user:
     name: alex
-    groups: admin
+    #groups: admin
+    groups: sudo
     append: yes
