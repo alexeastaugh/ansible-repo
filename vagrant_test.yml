@@ -1,7 +1,7 @@
 ---
 - hosts: vagrant-testing
   roles:
-    - testing
+    #- testing
     - users
     - ubuntu-apt-packages
     - dotfiles
