@@ -1,11 +1,8 @@
 ---
-# tasks file for ubuntu-apt-packages
-
 - name: Install Packages
   become: true
   apt: 
     force_apt_get: yes
-    update_cache: yes
     name: [
       'vim', 
       'curl', 
@@ -13,14 +10,20 @@
       'git', 
       'htop', 
       'tmux', 
+      'youtube-dl', 
+      'moc', 
+      'network-manager-openvpn', 
+      'network-manager-openvpn-gnome', 
       'xfonts-terminus', 
       'scrot', 
+      'nautilus-dropbox',
       'mpv', 
       'tree', 
-      'nmap',
+      'nmap', 
+      'vagrant', 
+      'tilix', 
       'python3-setuptools', 
       'python3-pip', 
       'zsh', 
       'jq', 
-      'imagemagick'
-      ]
+      'imagemagick']
